@@ -1,0 +1,30 @@
+/* style.css */
+/*we should stick to a primarily orange and blue color scheme with white text*/
+body {
+    background-color: #00ccff; /* Sky Blue background */
+    font-family: "Old English Text", "Georgia", serif;
+}
+
+h1 {
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+/* button things, idk what i'm doing tbh */
+.main-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.cowboy-image {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
