@@ -27,11 +27,14 @@
 
 <script>
 // play button click sound effect
+
 function playClick(){
     const clickSound = document.getElementById("click-sound")
+    clickSound.volume = 1.0 
     clickSound.currentTime = 0; 
     clickSound.play();
     }
+    
 function toggleMusic(){
     const music = document.getElementById("menu-music");
     const btn = document.getElementById("musicbutton");
@@ -55,7 +58,7 @@ function openRules(){
 
 }
 function openSettings(){
-    console.log(Opening settings...)
+    console.log("Opening settings...")
 
 }
 
