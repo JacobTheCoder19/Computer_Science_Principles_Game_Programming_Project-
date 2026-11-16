@@ -15,16 +15,16 @@ h1 {
     display: flex;
     align-items: center; 
     justify-content: center;
-    gap: 50 px;
-    margin-top: 30 px;
+    gap: 50px;
+    margin-top: 30px;
 }
 .cowboy-image {
-    width: 350 px;
+    width: 350px;
     height: auto;
-    border-radius: 10 px;
+    border-radius: 10px;
 }
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 15 px;
+    gap: 15px;
 }
