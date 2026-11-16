@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scratch Offs</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/playerValues.js"></script>
+    <script src="scripts/scratchGame.js"></script>
+</head>
+
+<body>
+    
+
+    <div id="game">
+        <!-- Shop: the ticket list gets filled in by JavaScript -->
+        <div id="shop">
+            <div id="money"></div>
+            <div class="shop-title">Scratch Offs</div>
+            <div id="ticket-list">
+                <div id="ticket-list">
+
+                    <div class="shop-item">
+                        <img src="assets/ScratchOffAssets/ticket_background.png" alt="Gold Rush Bounty">
+                        <div>
+                            <div class="name">Gold Rush Bounty</div>
+                            <div class="price">$5</div>
+                            <div class="top">Top prize: $100</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Table: bought tickets show up here -->
+        <div id="table">
+            <div id="table-hint">Buy a ticket to start scratching!</div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
