@@ -9,3 +9,22 @@ h1 {
     color: #ffffff; /* White text */
     text-align: center;
 }
+
+/* button things, idk what i'm doing tbh */
+.main-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 50 px;
+    margin-top: 30 px;
+}
+.cowboy-image {
+    width: 350 px;
+    height: auto;
+    border-radius: 10 px;
+}
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15 px;
+}
