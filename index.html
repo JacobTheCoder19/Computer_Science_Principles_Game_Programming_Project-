@@ -34,13 +34,13 @@ function playClick(){
     clickSound.currentTime = 0; 
     clickSound.play();
     }
-    
+
 function toggleMusic(){
     const music = document.getElementById("menu-music");
     const btn = document.getElementById("musicbutton");
 
     if (music.paused) {
-        music.volume = 0.4; 
+        music.volume = 0.25; 
         music.play();
         btn.textContent = "Mute Music";
     } else {
