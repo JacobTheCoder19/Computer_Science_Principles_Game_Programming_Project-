@@ -11,7 +11,7 @@
 
 <!--Menu Song/Button Click Noises-->
 <audio id="menu-music" src="audio/8bit3dcountry.mp3" loop></audio>
-<audio id="click-sound" src="assests/buttonclick.wav"></audio>
+<audio id="click-sound" src="audio/buttonclick.wav"></audio>
 
 <div class="main-container">
     <img src="assets/johnwayne.png" alt="a rootin tootin cowboy" class="cowboy-image">
@@ -30,7 +30,7 @@
 function playClick(){
     const clickSound = document.getElementById("click-sound")
     clickSound.currentTime = 0; 
-    click.Sound.play();
+    clickSound.play();
     }
 function toggleMusic(){
     const music = document.getElementById("menu-music");
@@ -45,6 +45,19 @@ function toggleMusic(){
         btn.textContent = "Play Music";
     }
 }
+
+/* filler functions*/
+function openMap(){
+    console.log("Opening map...")
+}
+function openRules("Opening rules..."){
+
+}
+function openSettings(Opening settings...){
+
+}
+
+
 </script>
 
 
