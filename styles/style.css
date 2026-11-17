@@ -132,3 +132,131 @@ h1 {
     width: 9.6%;
     height: 11.2%;
 }
+
+#symbol-1{
+    position: absolute;
+    left: 45%;   
+    top: 49.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-1-cover{
+    position: absolute;
+    left: 45.4%;   
+    top: 48.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-2{
+    position: absolute;
+    left: 55.5%;   
+    top: 49.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-2-cover{
+    position: absolute;
+    left: 56.3%;   
+    top: 48.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-3{
+    position: absolute;
+    left: 34.5%;   
+    top: 62.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-3-cover{
+    position: absolute;
+    left: 34.7%;   
+    top: 60.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-4{
+    position: absolute;
+    left: 45%;   
+    top: 62.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-4-cover{
+    position: absolute;
+    left: 45.5%;   
+    top: 60.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-5{
+    position: absolute;
+    left: 55.5%;   
+    top: 62.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-5-cover{
+    position: absolute;
+    left: 56.3%;   
+    top: 60.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-6{
+    position: absolute;
+    left: 34.5%;   
+    top: 74.5%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-6-cover{
+    position: absolute;
+    left: 34.7%;   
+    top: 72.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-7{
+    position: absolute;
+    left: 45%;   
+    top: 74.2%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-7-cover{
+    position: absolute;
+    left: 45.3%;   
+    top: 72.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
+
+#symbol-8{
+    position: absolute;
+    left: 55.5%;   
+    top: 74.2%;     
+    width: 10.5%; 
+    height: 8%;
+}
+
+#symbol-8-cover{
+    position: absolute;
+    left: 56.3%;   
+    top: 72.3%;
+    width: 9.6%;
+    height: 11.2%;
+}
