@@ -4,6 +4,7 @@ const moneyBox = document.getElementById("money");
 const numOfSymbols = [0, 0, 0, 0, 0, 0]; 
 const symbolNames = ["Cactuses", "Hats", "Horseshoes", "Money Bags", "Nuggets", "Stars"];
 let boxesScratched = 0;
+let moneyWon = 0;
 
 function showMoney() {
     moneyBox.textContent = "$" + player.money;
@@ -20,6 +21,9 @@ ticket.addEventListener("click", function () {
     player.money -= 5;
     savePlayer();
     showMoney();
+    const title = document.getElementById("title");
+    title.textContent = "Wild Rambling Gambling West - Scratch Offs";
+    title.style.color = "White";
 });
 
 
@@ -282,6 +286,9 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 100;
+            moneyWon = 100;
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -294,6 +301,10 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 65;
+            moneyWon = 65;
+
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -306,6 +317,10 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 55;
+            moneyWon = 55;
+
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -318,6 +333,10 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 45;
+            moneyWon = 45;
+
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -330,6 +349,10 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 25;
+            moneyWon = 25;
+
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -342,6 +365,10 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 15;
+            moneyWon = 15;
+
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
@@ -354,12 +381,19 @@ function checkForWin(){
 
             // Add wins to players account
             player.money += 10;
+            moneyWon = 10;
+            
+            // Displays whether they won or lost
+            displayWOrL(1);
 
             // Save the data locally and show updated balance
             savePlayer();
             showMoney();
         } else {
             // SECTION TO PUT THE WON NOTHING -> Work in progress...
+            // Displays whether they won or lost
+            displayWOrL(0);
+
             // Wait 3 seconds before deleting ticket
             setTimeout(function () {
                 deleteTicket();
@@ -396,5 +430,17 @@ function deleteTicket(){
 function clearNumOfSymbols(){
     for (let i = 0; i < 6; i++){
         numOfSymbols[i] = 0;
+    }
+}
+
+function displayWOrL(win){
+    const title = document.getElementById("title");
+    if(win === 0){
+        title.textContent = "You Lost...";
+        title.style.color = "Red";
+    } else {
+        title.textContent = "You Win $" + moneyWon;
+        title.style.color = "Green";
+        moneyWon = 0;
     }
 }
