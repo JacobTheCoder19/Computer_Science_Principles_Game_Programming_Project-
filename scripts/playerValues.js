@@ -1,6 +1,6 @@
 // Starting money and values for the player's first game
 const DEFAULT_PLAYER = {
-    money: 50,
+    money: 10,
     money_Lost: 0
 };
 
