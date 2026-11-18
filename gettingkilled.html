@@ -6,6 +6,7 @@
         <title>Map</title>
         <link rel="stylesheet" href="styles/style.css">
     </head>
+    <audio id="click-sound" src="audio/buttonclick.mp3"></audio>
     <body>
         <h1>YOU DIED</h1>
   
@@ -15,7 +16,7 @@
 
     <script>
 function playClick(){
-        const clickSound = document.getElementById("buttonclick.mp3")
+        const clickSound = document.getElementById("click-sound")
     clickSound.volume = 0.2 
     clickSound.currentTime = 0; 
     clickSound.play();
