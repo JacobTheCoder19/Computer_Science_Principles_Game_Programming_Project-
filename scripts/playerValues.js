@@ -28,7 +28,7 @@ function loadPlayer(){
 }
 
 function savePlayer() {
-    if (player = 0){
+    if (player <= 0){
         window.location.href="gettingkilled.html";
         
     try {
