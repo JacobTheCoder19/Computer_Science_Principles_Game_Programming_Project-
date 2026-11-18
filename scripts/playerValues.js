@@ -31,7 +31,6 @@ function savePlayer() {
     if (player.money <= 0){
         window.location.href="gettingkilled.html";
     }        
-
     try {
         // This basically turns the player object into a flat string or serialization by following the address
         // in player and reads the actual values and writes them as text.Then it stores it as "player"
@@ -41,7 +40,6 @@ function savePlayer() {
     }
      
     }
-}
 
 function resetPlayer(){
      console.log("does nothing rn...")
