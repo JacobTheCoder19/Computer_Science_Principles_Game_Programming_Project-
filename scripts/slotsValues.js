@@ -3,7 +3,7 @@
         // GAME VARIABLES
         // =========================
 
-        let coins = 100;
+        let coins = player.money
         let bet = 10;
         let spinning = false;
         let gameEnded = false;
@@ -294,6 +294,9 @@
                 const winnings = bet * 10;
 
                 coins += winnings;
+                player.money = coins;
+                savePlayer();
+
 
                 message.textContent =
                     "JACKPOT! THREE MATCHING SYMBOLS! YOU WON " +
@@ -312,7 +315,8 @@
                 const winnings = bet * 3;
 
                 coins += winnings;
-
+                player.money = coins;
+                savePlayer();
                 message.textContent =
                     "NICE ONE, PARTNER! TWO MATCHING SYMBOLS! YOU WON " +
                     winnings + " COINS!";
@@ -327,7 +331,8 @@
                     "NO MATCH THIS TIME. BETTER LUCK NEXT TIME!";
 
             }
-
+            player.money = coins;
+            savePlayer();
             updateDisplay();
 
             // GAME OVER IF BELOW MINIMUM BET
