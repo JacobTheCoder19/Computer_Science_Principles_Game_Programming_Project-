@@ -266,3 +266,204 @@ h1 {
     width: 9.6%;
     height: 11.2%;
 }
+/* SLOTS GAME STYLE */
+ * {
+            box-sizing: border-box;
+        }
+
+        #slots_body {
+            margin: 0;
+            padding: 30px 15px;
+            background-color:#00ccff;
+            color: #f5d69b;
+            font-family: "Special Elite", monospace;
+            text-align: center;
+            min-width: 700px;
+        }
+
+        h1, h2, h3, button {
+            font-family: "Rye", serif;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #e8b45c;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           MAIN GAME PANEL
+        ========================= */
+
+        .game-container {
+            width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: #704323;
+            border: 5px solid #bd873e;
+            outline: 3px solid #e8b45c;
+        }
+
+        .balance {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .balance span {
+            color: #e8b45c;
+            font-weight: bold;
+        }
+
+        /* =========================
+           SLOT MACHINE REELS
+        ========================= */
+
+        .reels {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .reel {
+            width: 140px;
+            height: 140px;
+            background-color: #f5d69b;
+            border: 5px solid #bd873e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .reel img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+        }
+
+        /* =========================
+           BETTING CONTROLS
+        ========================= */
+
+        .bet-section {
+            margin: 20px 0;
+        }
+
+        .bet-label {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .bet-amount {
+            color: #e8b45c;
+            font-size: 24px;
+            margin: 0 15px;
+        }
+
+        .bet-button {
+            padding: 8px 15px;
+            font-size: 18px;
+            background-color: #382116;
+            color: #f5d69b;
+            border: 2px solid #bd873e;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .bet-button:hover:not(:disabled) {
+            background-color: #a83220;
+        }
+
+        /* =========================
+           MAIN BUTTONS
+        ========================= */
+
+        button {
+            background-color: #a83220;
+            color: #f5d69b;
+            border: 3px solid #e8b45c;
+            padding: 14px 28px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #7d2419;
+        }
+
+        button:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .spin-button {
+            font-size: 24px;
+            padding: 15px 45px;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           GAME MESSAGE
+        ========================= */
+
+        .message {
+            min-height: 55px;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .payout-rules {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid #bd873e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           GAME OVER SCREEN
+        ========================= */
+
+        .game-over {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #24140e;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        .game-over-content {
+            width: 450px;
+            padding: 35px 25px;
+            background-color: #704323;
+            border: 5px solid #bd873e;
+            outline: 3px solid #e8b45c;
+        }
+
+        .game-over h2 {
+            font-size: 38px;
+            color: #e8b45c;
+            margin-top: 0;
+        }
+
+        .game-over p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .play-again-button {
+            margin-top: 15px;
+        }
