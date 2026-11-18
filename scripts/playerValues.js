@@ -43,5 +43,8 @@ function savePlayer() {
     }
 }
 
+function resetPlayer(){
+     console.log("does nothing rn...")
+}
 
 const player = loadPlayer();
