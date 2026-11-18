@@ -29,7 +29,9 @@ function loadPlayer(){
 
 function savePlayer() {
     if (player.money <= 0){
+        resetPlayer();
         window.location.href="gettingkilled.html";
+        
     }        
     try {
         // This basically turns the player object into a flat string or serialization by following the address
@@ -41,9 +43,7 @@ function savePlayer() {
 }
 
 function resetPlayer(){
-     Object.assign(player, DEFAULT_PLAYER);
-
-     savePlayer();
+     player.money=DEFAULT_PLAYER.money;
 }
 
 const player = loadPlayer();
