@@ -39,7 +39,6 @@ function savePlayer() {
         console.error("Failed to save player values", err);
     }
      
-    }
 
 function resetPlayer(){
      console.log("does nothing rn...")
