@@ -38,10 +38,12 @@ function savePlayer() {
     } catch (err) {
         console.error("Failed to save player values", err);
     }
-     
+}
 
 function resetPlayer(){
-     console.log("does nothing rn...")
+     Object.assign(player, DEFAULT_PLAYER);
+
+     savePlayer();
 }
 
 const player = loadPlayer();
