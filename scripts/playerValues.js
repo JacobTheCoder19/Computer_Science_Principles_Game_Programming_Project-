@@ -24,9 +24,15 @@ function loadPlayer(){
         console.warn("Player saved values are corrupted, starting with default values", err);
         return {...DEFAULT_PLAYER};
     }
+   
 }
 
 function savePlayer() {
+    if (player.money <= 0){
+        resetPlayer();
+        window.location.href="gettingkilled.html";
+        
+    }        
     try {
         // This basically turns the player object into a flat string or serialization by following the address
         // in player and reads the actual values and writes them as text.Then it stores it as "player"
@@ -34,6 +40,10 @@ function savePlayer() {
     } catch (err) {
         console.error("Failed to save player values", err);
     }
+}
+
+function resetPlayer(){
+     player.money=DEFAULT_PLAYER.money;
 }
 
 const player = loadPlayer();

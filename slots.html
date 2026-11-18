@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild West Slots</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/style.css">
+       
+</head>
+
+<body id="slots_body">
+
+    <!-- =========================
+         GAME TITLE
+    ========================= -->
+
+    <h1>WILD WEST SLOTS</h1>
+    <p class="subtitle">WELCOME TO THE WILD RAMBLING GAMBLING WEST</p>
+
+    <!-- =========================
+         MAIN GAME
+    ========================= -->
+
+    <div class="game-container">
+
+        <div class="balance">
+            COINS: <span id="coins">100</span>
+        </div>
+
+        <!-- SLOT REELS -->
+
+        <div class="reels">
+
+            <div class="reel">
+                <img id="reel1" src="images/cowboy.png" alt="Cowboy">
+            </div>
+
+            <div class="reel">
+                <img id="reel2" src="images/star.png" alt="Star">
+            </div>
+
+            <div class="reel">
+                <img id="reel3" src="images/cactus.png" alt="Cactus">
+            </div>
+
+        </div>
+
+        <!-- BETTING CONTROLS -->
+
+        <div class="bet-section">
+
+            <div class="bet-label">YOUR BET</div>
+
+            <button class="bet-button" id="decreaseBet">-</button>
+
+            <span class="bet-amount" id="betAmount">10</span>
+
+            <button class="bet-button" id="increaseBet">+</button>
+
+        </div>
+
+        <!-- SPIN BUTTON -->
+
+        <button class="spin-button" id="spinButton">
+            SPIN!
+        </button>
+
+        <!-- GAME MESSAGE -->
+
+        <div class="message" id="message">
+            STEP RIGHT UP, PARTNER!
+        </div>
+
+        <!-- PAYOUT RULES -->
+
+        <div class="payout-rules">
+            TWO MATCHING SYMBOLS = 3X YOUR BET<br>
+            THREE MATCHING SYMBOLS = 10X YOUR BET<br>
+            NO MATCH = YOU LOSE YOUR BET
+        </div>
+
+    </div>
+
+    <!-- =========================
+         GAME OVER SCREEN
+    ========================= -->
+
+    <div class="game-over" id="gameOver">
+
+        <div class="game-over-content">
+
+            <h2>GAME OVER!</h2>
+
+            <p>Looks like you've run out of luck, partner.</p>
+
+            <p>
+                FINAL BALANCE:
+                <strong id="finalBalance">0</strong> COINS
+            </p>
+
+            <button class="play-again-button" id="playAgain">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="scripts/playerValues.js"></script>
+    <script src="scripts/slotsValues.js"></script>
+</body>
+</html>

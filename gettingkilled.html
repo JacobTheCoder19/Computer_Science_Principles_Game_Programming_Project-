@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Map</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <h1>YOU DIED</h1>
+    <audio id="click-sound" src="audio/buttonclick.mp3"></audio>
+    
+  <div class="subcontainer">
+        <img src="assets/killed.png" alt="emily-green-fucking-kills-you">
+
+<div class="menu-buttons">
+     <button onclick="playClick(); startover()">START OVER</button>
+     </div>
+    </div>
+
+    <script>
+function playClick(){
+        const clickSound = document.getElementById("click-sound")
+    clickSound.volume = 0.2 
+    clickSound.currentTime = 0; 
+    clickSound.play();
+    }
+
+function startover() {
+        window.location.href="index.html";
+    }        
+
+    </script>
+  </body>
+  </html>
