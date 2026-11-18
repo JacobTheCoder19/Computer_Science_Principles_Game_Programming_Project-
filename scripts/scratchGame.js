@@ -2,6 +2,8 @@ const moneyBox = document.getElementById("money");
 // Array to keep track of the number of each symbol
 // [cactus, hat, horseshoe, money bag, nugget, star]
 const numOfSymbols = [0, 0, 0, 0, 0, 0]; 
+const symbolNames = ["Cactuses", "Hats", "Horseshoes", "Money Bags", "Nuggets", "Stars"];
+let boxesScratched = 0;
 
 function showMoney() {
     moneyBox.textContent = "$" + player.money;
@@ -20,11 +22,13 @@ ticket.addEventListener("click", function () {
     showMoney();
 });
 
+
 // Load ticket to board and symbols
 const hint = document.getElementById("table-hint");
 const ticketImage = document.getElementById("ticket-image");
 const table = document.getElementById("table");
 function loadTicket() {
+    
     // Hides the hint and shows the ticket image
     hint.style.display = "none";
     ticketImage.style.display = "block";
@@ -33,6 +37,7 @@ function loadTicket() {
     // Make the <img>
     const ticketBox0 = document.createElement("img");
     ticketBox0.id = "symbol-0";
+    ticketBox0.className = "cover";
 
     const ticketBox1 = document.createElement("img");
     ticketBox1.id = "symbol-1";
@@ -145,6 +150,79 @@ function loadTicket() {
     table.append(ticketBox8);
     table.append(ticketBox8Cover);
     console.log(numOfSymbols);
+
+    //"Scratching" the ticket
+    ticketBox0Cover.addEventListener("click", function () {
+        ticketBox0Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox1Cover.addEventListener("click", function () {
+        ticketBox1Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox2Cover.addEventListener("click", function () {
+        ticketBox2Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox3Cover.addEventListener("click", function () {
+        ticketBox3Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox4Cover.addEventListener("click", function () {
+        ticketBox4Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox5Cover.addEventListener("click", function () {
+        ticketBox5Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox6Cover.addEventListener("click", function () {
+        ticketBox6Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox7Cover.addEventListener("click", function () {
+        ticketBox7Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
+
+    ticketBox8Cover.addEventListener("click", function () {
+        ticketBox8Cover.remove();
+        console.log("You scratched a box!");
+        boxesScratched = boxesScratched + 1;
+        console.log(boxesScratched);
+        checkForWin();
+    });
 }
 
 // Function to pick a random symbol for the ticket
@@ -182,5 +260,141 @@ function generateSymbol(box) {
             box.alt = "Star symbol";
             numOfSymbols[5]++;
             break;
+    }
+}
+
+// Function that checks if all boxes have been scratched. If all have been scratched it checks if the user won.
+function checkForWin(){
+    if (boxesScratched === 9) {
+        let check3 = numOfSymbols.indexOf(3)
+        let check4 = numOfSymbols.indexOf(4)
+        let check5 = numOfSymbols.indexOf(5)
+        let check6 = numOfSymbols.indexOf(6)
+        let check7 = numOfSymbols.indexOf(7)
+        let check8 = numOfSymbols.indexOf(8)
+        let check9 = numOfSymbols.indexOf(9)
+
+        if (check9 != -1){
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 100;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check8 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 65;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check7 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 55;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check6 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 45;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check5 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 25;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check4 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 15;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else if (check3 != -1) {
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+
+            // Add wins to players account
+            player.money += 10;
+
+            // Save the data locally and show updated balance
+            savePlayer();
+            showMoney();
+        } else {
+            // SECTION TO PUT THE WON NOTHING -> Work in progress...
+            // Wait 3 seconds before deleting ticket
+            setTimeout(function () {
+                deleteTicket();
+            }, 3000);
+        }
+        // Reset the count of how many symbols are currently on the ticket
+        clearNumOfSymbols();
+        boxesScratched = 0;
+    }
+  
+}
+
+// Deletes all the created images, hides the base ticket, and then displays the text on the table again
+function deleteTicket(){
+    
+    for (let i = 0; i < 9; i++) {
+        const symbol = document.getElementById("symbol-" + i);
+        const cover = document.getElementById("symbol-" + i + "-cover");
+
+        if (symbol) {
+            symbol.remove();
+        }
+        if (cover) {
+            cover.remove();
+        }
+    }
+
+    // Remove Base Tickect
+    hint.style.display = "block";
+    ticketImage.style.display = "none";
+}
+
+// Resets the numOfSymbols array so that each ticket starts with a fresh count of active symbols
+function clearNumOfSymbols(){
+    for (let i = 0; i < 6; i++){
+        numOfSymbols[i] = 0;
     }
 }
