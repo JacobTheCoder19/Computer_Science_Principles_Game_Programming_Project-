@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <title>Map</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+<h1> Choose Your Vice </h1>
+
+<!--Menu Song/Button Click Noises-->
+<audio id="menu-music" src="audio/3dcountry.mp3" loop></audio>
+<audio id="click-sound" src="audio/buttonclick.mp3"></audio>
+
+<div class="main-container">
+    <img src="assets/johnwayne.png" alt="a rootin tootin cowboy" class="cowboy-image">
+
+<div class="menu-buttons">
+     <button onclick="playClick(); openMap()">Saloon</button>
+
+</div>
+</div>
+
+<script>
+// play button click sound effect
+
+function playClick(){
+    const clickSound = document.getElementById("click-sound")
+    clickSound.volume = 0.2 
+    clickSound.currentTime = 0; 
+    clickSound.play();
+    }
+
+function toggleMusic(){
+    const music = document.getElementById("menu-music");
+    const btn = document.getElementById("musicbutton");
+
+    if (music.paused) {
+        music.volume = 0.4; 
+        music.play();
+        btn.textContent = "Mute Music";
+    } else {
+        music.pause();
+        btn.textContent = "Play Music";
+    }
+}
+
+
+</script>
+
+
+</body>
+</html>
